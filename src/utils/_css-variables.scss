@@ -1,0 +1,10 @@
+:root {
+  --background-color: rgb(236, 240, 243);
+  --body-color: rgba(236, 240, 243, 0.75);
+  --white: #ffffff;
+  --theme-color: #61a0af;
+  --boxShadow: 3px 3px 7px rgba(165, 195, 220, 0.81),
+    -3px -3px 7px rgba(255, 255, 255, 0.51);
+  --boxShadowInset: 3px 3px 4px rgba(165, 195, 220, 0.81) inset,
+    -3px -3px 4px rgba(255, 255, 255, 0.51) inset;
+}

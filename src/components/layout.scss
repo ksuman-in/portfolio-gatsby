@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--body-color);
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.layout-container {
+  max-width: 1536px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: minmax(320px, 28%) 1fr;
+  margin: auto;
+  .right-container {
+    background-color: var(--background-color);
+    position: relative;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    .right-container {
+      z-index: 2;
+    }
+  }
+}

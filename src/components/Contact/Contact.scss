@@ -1,0 +1,62 @@
+#contact-section,
+#profile {
+  .icons {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    column-gap: 15px;
+    row-gap: 20px;
+    .icon {
+      position: relative;
+      list-style: none;
+      height: 50px;
+      width: 50px;
+      margin: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: ease-in-out 300ms;
+      box-shadow: -3px -3px 7px rgba(#ffffff, 0.73),
+        3px 3px 5px rgba(94, 104, 121, 0.288);
+      &__link {
+        line-height: 50px;
+        font-size: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #b6bbc5;
+        svg {
+          position: relative;
+          left: 1px;
+        }
+      }
+      &:hover {
+        background-color: var(--hoverColor);
+        a {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 35px;
+          width: 35px;
+          line-height: 35px;
+          border-radius: 50%;
+          font-size: 20px;
+          background-color: var(--background-color);
+          color: var(--hoverColor);
+          box-shadow: inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+        }
+      }
+    }
+  }
+}
+#profile .icons {
+  padding-top: 15px;
+  flex-wrap: inherit;
+  column-gap: 10px;
+  .icon {
+    margin: 0;
+  }
+}

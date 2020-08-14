@@ -11,14 +11,21 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && development -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
     "gatsby": "^2.23.12",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
+    "gatsby-plugin-sass": "^2.3.12",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.10.0"
   },
   "devDependencies": {
+    "gatsby-plugin-eslint": "^2.0.8",
+    "gh-pages": "^3.1.0",
     "prettier": "2.0.5"
   },
   "repository": {

@@ -1,0 +1,160 @@
+.tabs-infoblocks {
+  padding: 32px 32px 16px;
+  overflow-y: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .tabs-infoblock {
+    // background-color: #fff;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: var(--boxShadowInset);
+    &__inner {
+      padding-right: 48px;
+      padding-left: 48px;
+      @media screen and (max-width: 768px) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .title {
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 56px;
+      }
+      .main-title {
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 80px;
+        &__label {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 34px;
+          @media screen and (max-width: 560px) {
+            font-size: 32px;
+          }
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 1px;
+            background-image: linear-gradient(
+              to right,
+              #f0f0f0,
+              #00b9ff,
+              #59d941,
+              #f0f0f0
+            );
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            @media screen and (max-width: 1080px) and (min-width: 768px) {
+              width: 80px;
+            }
+            @media screen and (max-width: 560px) {
+              width: 80px;
+            }
+            @media screen and (max-width: 420px) {
+              width: 60px;
+            }
+          }
+          &::before {
+            left: -152px;
+            @media screen and (max-width: 1080px) and (min-width: 768px) {
+              left: -90px;
+            }
+            @media screen and (max-width: 560px) {
+              left: -90px;
+            }
+            @media screen and (max-width: 420px) {
+              left: -65px;
+            }
+          }
+          &::after {
+            right: -152px;
+            @media screen and (max-width: 1080px) and (min-width: 768px) {
+              right: -90px;
+            }
+            @media screen and (max-width: 560px) {
+              right: -90px;
+            }
+            @media screen and (max-width: 420px) {
+              right: -65px;
+            }
+          }
+        }
+      }
+      .content__section {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 80px;
+        margin-bottom: 80px;
+        border-bottom: 0.1rem dashed #b2dfdb;
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+        .title__middle {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          svg {
+            height: 28px;
+            width: 28px;
+            margin-right: 3px;
+          }
+          &--label {
+            font-size: 24px;
+          }
+        }
+        .blockquote {
+          position: relative;
+          padding: 0 40px;
+          box-sizing: border-box;
+          border-left: 5px solid var(--theme-color);
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 0;
+          margin-right: 0;
+          @media screen and (max-width: 768px) {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+    .flag-badge {
+      display: block;
+      background-color: var(--theme-color);
+      width: 56px;
+      height: 88px;
+      position: absolute;
+      top: 0;
+      right: 50px;
+      @media screen and (max-width: 768px) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::after {
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 28px solid var(--background-color);
+        border-left: 28px solid transparent;
+        border-right: 28px solid transparent;
+      }
+    }
+  }
+}

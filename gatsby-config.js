@@ -6,5 +6,6 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: ["gatsby-plugin-eslint", `gatsby-plugin-sass`, `react-icons`],
+  pathPrefix: "/gatsby-portfolio",
 }

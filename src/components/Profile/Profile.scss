@@ -1,0 +1,83 @@
+.profile-container {
+  width: 100%;
+  max-height: 768px;
+  height: 100vh;
+  background: var(--background-color);
+  box-shadow: var(--boxShadow);
+  // box-shadow: 6px 6px 26px 0px rgba(217, 210, 200, 0.51),
+  //   -6px -6px 16px 0px rgba(255, 255, 255, 0.83);
+  position: sticky;
+  display: block;
+  z-index: 1;
+  @media screen and (max-width: 768px) {
+    // width: 100vw;
+    position: relative;
+    box-shadow: var(--boxShadowInset);
+  }
+  top: 0;
+  .avatar {
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    &__img {
+      border-radius: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 15px;
+      object-fit: cover;
+    }
+    img[alt]:after {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--background-color);
+      content: attr(alt);
+      box-shadow: var(--boxShadowInset);
+    }
+  }
+  .welcome {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    span {
+      &:nth-child(1) {
+        margin-right: 5px;
+      }
+    }
+    &__name {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    &__label {
+      margin: 0;
+      font-size: 1rem;
+      &--from {
+        text-transform: uppercase;
+        background: linear-gradient(
+          to bottom,
+          #f93 25%,
+          #fff 50%,
+          #138808 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      }
+    }
+    &__description {
+      width: 100%;
+      margin: 0;
+      padding: 20px 30px 20px;
+      text-align: justify;
+    }
+  }
+}
