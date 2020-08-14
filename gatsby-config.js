@@ -7,5 +7,4 @@
 module.exports = {
   /* Your site config here */
   plugins: ["gatsby-plugin-eslint", `gatsby-plugin-sass`, `react-icons`],
-  pathPrefix: "/gatsby-portfolio",
 }
