@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./works.scss"
+import "./Works.scss"
 
 class Works extends Component {
   componentDidMount() {
