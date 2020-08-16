@@ -70,7 +70,7 @@ class Profile extends Component {
           </h3>
           <p className="welcome__label">
             <span className="welcome__label--prof">
-              Front-end Developer From
+              Front-End Developer From
             </span>
             <span className="welcome__label--from">India</span>
           </p>
