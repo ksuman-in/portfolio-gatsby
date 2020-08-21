@@ -17,17 +17,26 @@
   top: 0;
   .avatar {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     margin: auto;
     margin-top: 20px;
     position: relative;
+    border-radius: 50%;
+    box-shadow: var(--boxShadow);
+    &:hover {
+      box-shadow: var(--boxShadowInset);
+      .avatar__img {
+        transform: scale(0.95);
+      }
+    }
     &__img {
       border-radius: 50%;
       height: 100%;
       margin: 0;
-      padding: 15px;
+      padding: 8px;
       object-fit: cover;
+      transition: all 300ms ease-in-out;
     }
     img[alt]:after {
       display: flex;

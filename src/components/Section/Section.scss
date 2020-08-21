@@ -98,7 +98,7 @@
         max-width: 100%;
         padding-bottom: 80px;
         margin-bottom: 80px;
-        border-bottom: 0.1rem dashed #b2dfdb;
+        border-bottom: 1px dashed var(--theme-color);
         &:last-child {
           margin-bottom: 0px;
           padding-bottom: 0;

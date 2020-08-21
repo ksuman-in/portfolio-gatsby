@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/Header"
 import Section from "../components/Section"
+import SEO from "../components/seo"
 import "../styles/style.scss"
 
 class IndexPage extends React.Component {
@@ -39,6 +40,7 @@ class IndexPage extends React.Component {
     const { activeMenu, bodyWidth, profileHeight } = this.state
     return (
       <Layout>
+        <SEO title="Suman Kumar" />
         <Header
           activeMenuList={data => this.activeMenuList(data)}
           activeMenu={activeMenu}

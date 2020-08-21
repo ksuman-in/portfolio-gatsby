@@ -19,12 +19,16 @@
       align-items: center;
       color: var(--white);
       transition: all ease-in 300ms;
+      background: linear-gradient(to left, var(--theme-color) 50%, #fff 50%);
+      background-position: right top;
+      background-size: 200% 110%;
+      text-align: center;
       &:hover {
         cursor: pointer;
       }
       &.active {
-        background-color: var(--white);
         color: var(--theme-color);
+        background-position: left top;
         @media screen and (max-width: 768px) {
           flex-direction: column;
           padding-bottom: 30px;
@@ -33,6 +37,7 @@
       .menu-text {
         font-size: 18px;
         transition: all ease-in-out 300ms;
+        text-align: center;
       }
       svg {
         display: none;

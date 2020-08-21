@@ -36,42 +36,43 @@
     }
   }
   .timeline {
-    border-left: 3px solid var(--theme-color);
+    // border-left: 3px solid var(--theme-color);
     position: relative;
-    padding: 48px 0 1px 32px;
+    padding: 48px 0 1px 0;
     &__box {
       margin-bottom: 48px;
       padding: 16px 24px;
       position: relative;
-      border-left: 1px solid var(--theme-color);
+      // border-left: 1px solid var(--theme-color);
       border-radius: 5px;
       transition: border-color 0.4s ease-out;
       box-shadow: var(--boxShadow);
       &:hover {
-        background-color: rgba(#009688, 0.1);
+        // background-color: rgba(#009688, 0.1);
+        box-shadow: var(--boxShadowInset);
       }
-      &::before,
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        background-color: var(--theme-color);
-        transition: background-color 0.4s ease-out;
-      }
-      &::before {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        left: -43px;
-      }
-      &::after {
-        width: 32px;
-        height: 2px;
-        left: -32px;
-      }
+      // &::before,
+      // &::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   top: 50%;
+      //   -webkit-transform: translateY(-50%);
+      //   transform: translateY(-50%);
+      //   background-color: var(--theme-color);
+      //   transition: background-color 0.4s ease-out;
+      // }
+      // &::before {
+      //   width: 16px;
+      //   height: 16px;
+      //   border-radius: 50%;
+      //   left: -43px;
+      // }
+      // &::after {
+      //   width: 32px;
+      //   height: 2px;
+      //   left: -32px;
+      // }
       .title_small {
         font-size: 20px;
         text-align: center;
@@ -120,7 +121,7 @@
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 920px) {
     .resume {
       grid-template-columns: 1fr;
       grid-row-gap: 25px;
