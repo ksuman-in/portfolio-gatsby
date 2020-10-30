@@ -3,14 +3,14 @@
     .skill-details {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      grid-gap: 20px 15px;
+      grid-gap: 2rem 1.5rem;
       .progress-bar {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 10px 0;
-        border-radius: 5px;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
         box-shadow: var(--boxShadow);
         &:hover {
           box-shadow: var(--boxShadowInset);
@@ -22,7 +22,7 @@
           svg {
             height: 20px;
             width: 20px;
-            margin-right: 2px;
+            margin-right: 0.2rem;
           }
           &--text {
             margin: 0;

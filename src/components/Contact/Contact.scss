@@ -14,16 +14,15 @@
       border-radius: 50%;
       cursor: pointer;
       transition: ease-in-out 300ms;
-      box-shadow: -3px -3px 7px rgba(#ffffff, 0.73),
-        3px 3px 5px rgba(94, 104, 121, 0.288);
-      margin-right: 15px;
-      margin-bottom: 15px;
+      box-shadow: var(--boxShadow);
+      margin-right: 1.5rem;
+      margin-bottom: 1.5rem;
       &:last-child {
         margin-right: 0;
       }
       &__link {
-        line-height: 45px;
-        font-size: 27px;
+        line-height: 4, 5rem;
+        font-size: 2.7rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,20 +42,19 @@
           transform: translate(-50%, -50%);
           height: 35px;
           width: 35px;
-          line-height: 35px;
+          line-height: 3.5rem;
           border-radius: 50%;
-          font-size: 20px;
+          font-size: 2rem;
           background-color: var(--background-color);
           color: var(--hoverColor);
-          box-shadow: inset -3px -3px 7px #ffffff73,
-            inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+          box-shadow: var(--boxShadowInset);
         }
       }
     }
   }
 }
 #profile .icons {
-  padding-top: 15px;
+  padding-top: 1.5rem;
   flex-wrap: inherit;
   .icon {
     margin-bottom: 0;

@@ -6,12 +6,9 @@ import {
   GrInstagram,
   GrMail,
 } from "react-icons/gr"
-import {
-  AiOutlineWhatsApp,
-  AiOutlineGithub,
-  AiOutlineTwitter,
-} from "react-icons/ai"
+import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai"
 import { FiPhoneCall } from "react-icons/fi"
+import { FaWhatsapp } from "react-icons/fa"
 
 class Contact extends Component {
   componentDidMount() {
@@ -46,7 +43,7 @@ class Contact extends Component {
       },
       {
         name: "whatsapp",
-        iconName: <AiOutlineWhatsApp />,
+        iconName: <FaWhatsapp />,
         profileURL: "https://wa.me/918209900773",
         iconColor: "#128c7e",
       },

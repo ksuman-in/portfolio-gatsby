@@ -1,5 +1,6 @@
-import React, { Component } from "react"
-import "./Works.scss"
+import React, { Component } from 'react'
+import './Works.scss'
+import { Link } from 'gatsby'
 
 class Works extends Component {
   componentDidMount() {
@@ -12,37 +13,42 @@ class Works extends Component {
       window.scrollTo(0, 0)
     }
   }
+  truncateDescription =  (description) => {
+    const length = description.length;
+    const str = length >=100 ? `${description.slice(0, length-1)}...` : description;
+    return str;
+  }
   render() {
     const companyDetails = [
       {
         name: "Handzap Inc.",
         imgURL: "https://www.handzap.com/images/slider2.png",
-        description: `Reward Yourself. Earn More by Inviting Friends to Handzap. Improve People's Lives and Make Money, too! How It works ...`,
+        description: `Reward Yourself. Earn More by Inviting Friends to Handzap. Improve People's Lives and Make Money, too! How It works`,
         url: "https://www.handzap.com/",
       },
-      {
-        name: "Scribble Solutions",
-        imgURL:
-          "http://scribblesolutions.in/wp-content/uploads/2018/09/charts-cup-of-coffee-desk-1345089.jpg",
-        description: `Scribble Solutions is a digital solution start up incepted
-        in 2017. You can look forward to working with a young
-        enthusiastic team, brainstorming sessions and ...`,
-        url: "http://scribblesolutions.in/",
-      },
-      {
-        name: "Paridhi Jaipuria",
-        imgURL:
-          "http://paridhijaipuria.com/wp-content/uploads/2018/10/home-cover-3-opti.jpg",
-        description: `Paridhi Jaipuria&apos;s eponymous label drives a modern take
-        on traditional ways of weaving handlooms and has earned
-        renown in India&apos;s most prestigious fashion ...`,
-        url: "http://paridhijaipuria.com/",
-      },
+      // {
+      //   name: "Scribble Solutions",
+      //   imgURL:
+      //     "https://scribblesolutions.in/wp-content/uploads/2018/09/charts-cup-of-coffee-desk-1345089.jpg",
+      //   description: `Scribble Solutions is a digital solution start up incepted
+      //   in 2017. You can look forward to working with a young
+      //   enthusiastic team, brainstorming sessions and ...`,
+      //   url: "https://scribblesolutions.in/",
+      // },
+      // {
+      //   name: "Paridhi Jaipuria",
+      //   imgURL:
+      //     "https://paridhijaipuria.com/wp-content/uploads/2018/10/home-cover-3-opti.jpg",
+      //   description: `Paridhi Jaipuria&apos;s eponymous label drives a modern take
+      //   on traditional ways of weaving handlooms and has earned
+      //   renown in India&apos;s most prestigious fashion ...`,
+      //   url: "https://paridhijaipuria.com/",
+      // },
       {
         name: "Pasha India",
         imgURL:
           "https://pashaindia.com/wp-content/uploads/2020/02/Untitled-5-3.jpg",
-        description: `PASHA INDIA. Founded in 2014, Pasha is a quirky online destination for fashion and accessories. With the use of contrasting colors and a twist of art pop, Pasha ...`,
+        description: `PASHA INDIA. Founded in 2014, Pasha is a quirky online destination for fashion and accessories. With the use of contrasting colors and a twist of art pop, Pasha`,
         url: "https://pashaindia.com/",
       },
       {
@@ -50,7 +56,7 @@ class Works extends Component {
         imgURL:
           "https://wonderyearsjaipur.com/wp-content/uploads/2018/03/Hero-5-Full.jpg",
         description: `Wonder Years is a Reggio Emilia inspired Preschool,
-        After School Activity Workshop and Day Care for ..`,
+        After School Activity Workshop and Day Care for`,
         url: "https://wonderyearsjaipur.com/",
       },
     ]
@@ -86,7 +92,7 @@ class Works extends Component {
                   </div>
                   <div className="card__body">
                     <h5 className="card__body--title">{company.name}</h5>
-                    <p className="card__body--desc">{company.description}</p>
+                    <p className="card__body--desc">{this.truncateDescription(company.description)}</p>
                     <a
                       href={company.url}
                       target="_blank"
@@ -98,6 +104,21 @@ class Works extends Component {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="my-works">
+              <div className="card">
+                <div className="card__body">
+                  <h5 className="card__body--title">My Own Projects</h5>
+                  <Link
+                    to="/projects"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="card__body--button"
+                  >
+                    Show Your Love
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

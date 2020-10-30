@@ -1,0 +1,103 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+  }
+  &__main {
+    background-color: #fff;
+    padding: 2rem 2rem 6rem;
+    &--header {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0 3.5rem;
+      font-weight: 600;
+      position: relative;
+      .months {
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      padding-bottom: 1rem;
+      p {
+        padding: 0;
+        margin: 0;
+        justify-self: center;
+      }
+    }
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      .date {
+        justify-self: center;
+        cursor: default;
+        border: 0;
+        background-color: inherit;
+        width: 80%;
+        &:focus {
+          outline: none;
+        }
+      }
+      .date-active {
+        color: #f25856;
+        border: 0.1rem solid #f25856;
+        border-radius: 0.5rem;
+      }
+      .date-prev,
+      .date-next {
+        color: #d6a3ac;
+      }
+    }
+  }
+  &__today {
+    background-color: #f25856;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    span {
+      color: #fff;
+    }
+    .date {
+      height: 17rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      span {
+        height: 50%;
+        font-size: 18rem;
+      }
+    }
+    .day,
+    .month {
+      span {
+        font-size: 2.5rem;
+      }
+    }
+    @media screen and (max-width: 620px) {
+      padding: 0 2rem;
+      .date {
+        height: 10rem;
+        span {
+          height: 50%;
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
-import React from "react"
-import "./Header.scss"
+import React from 'react'
+import './Header.scss'
 import {
   FaEject,
   FaUserGraduate,
   FaBuffer,
   FaToolbox,
   FaIdBadge,
-} from "react-icons/fa"
+} from 'react-icons/fa'
 
 const Header = props => {
   const { activeMenuList, activeMenu } = props
@@ -16,28 +16,28 @@ const Header = props => {
   }
   const menuList = [
     {
-      name: "About me",
-      id: "about",
+      name: 'Home',
+      id: 'about',
       menuIcon: <FaEject />,
     },
     {
-      name: "Resume",
-      id: "resume",
+      name: 'Resume',
+      id: 'resume',
       menuIcon: <FaUserGraduate />,
     },
     {
-      name: "Skills",
-      id: "skills",
+      name: 'Skills',
+      id: 'skills',
       menuIcon: <FaBuffer />,
     },
     {
-      name: "Works",
-      id: "works",
+      name: 'Works',
+      id: 'works',
       menuIcon: <FaToolbox />,
     },
     {
-      name: "Contact",
-      id: "contact",
+      name: 'Contact',
+      id: 'contact',
       menuIcon: <FaIdBadge />,
     },
   ]
@@ -51,11 +51,11 @@ const Header = props => {
               key={index}
               onClick={e => handleCheck(e)}
               data-id={`tab-${item.id}`}
-              className={activeMenu === activeTab ? "active" : ""}
+              className={activeMenu === activeTab ? 'active' : ''}
             >
               <span
                 className={` nav-icon ${
-                  activeMenu === activeTab ? "active" : ""
+                  activeMenu === activeTab ? 'active' : ''
                 }`}
               >
                 {item.menuIcon}

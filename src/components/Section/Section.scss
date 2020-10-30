@@ -1,43 +1,43 @@
 .tabs-infoblocks {
-  padding: 32px 32px 16px;
+  padding: 3.2rem 3.2rem 1.6rem;
   overflow-y: hidden;
   width: 100%;
   box-sizing: border-box;
   @media screen and (max-width: 768px) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .tabs-infoblock {
-    // background-color: #fff;
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
     width: 100%;
     box-sizing: border-box;
     box-shadow: var(--boxShadowInset);
     &__inner {
-      padding-right: 48px;
-      padding-left: 48px;
+      padding-right: 4.8rem;
+      padding-left: 4.8rem;
       @media screen and (max-width: 768px) {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 4rem;
+        padding-right: 4rem;
       }
       .title {
         font-weight: 700;
         text-transform: uppercase;
-        line-height: 56px;
+        line-height: 5rem;
+        font-size: 1.8rem;
       }
       .main-title {
-        letter-spacing: 2px;
+        letter-spacing: 0.2rem;
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 8rem;
         &__label {
           position: relative;
           display: inline-block;
           vertical-align: middle;
-          font-size: 34px;
+          font-size: 3.4rem;
           @media screen and (max-width: 560px) {
-            font-size: 32px;
+            font-size: 3.2rem;
           }
           &::before,
           &::after {
@@ -96,11 +96,11 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        padding-bottom: 80px;
-        margin-bottom: 80px;
-        border-bottom: 1px dashed var(--theme-color);
+        padding-bottom: 8rem;
+        margin-bottom: 8rem;
+        border-bottom: 0.1rem dashed var(--theme-color);
         &:last-child {
-          margin-bottom: 0px;
+          margin-bottom: 0;
           padding-bottom: 0;
           border-bottom: none;
         }
@@ -111,23 +111,23 @@
           svg {
             height: 28px;
             width: 28px;
-            margin-right: 3px;
+            margin-right: 0.3rem;
           }
           &--label {
-            font-size: 24px;
+            font-size: 2.4rem;
           }
         }
         .blockquote {
           position: relative;
-          padding: 0 40px;
+          padding: 0 4rem;
           box-sizing: border-box;
-          border-left: 5px solid var(--theme-color);
-          font-size: 16px;
+          border-left: 0.5rem solid var(--theme-color);
+          font-size: 1.7rem;
           font-weight: 500;
           margin-left: 0;
           margin-right: 0;
           @media screen and (max-width: 768px) {
-            padding-right: 0px;
+            padding-right: 0;
           }
         }
       }
@@ -135,8 +135,8 @@
     .flag-badge {
       display: block;
       background-color: var(--theme-color);
-      width: 56px;
-      height: 88px;
+      width: 55px;
+      height: 75px;
       position: absolute;
       top: 0;
       right: 50px;
@@ -151,9 +151,9 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        border-bottom: 28px solid var(--background-color);
-        border-left: 28px solid transparent;
-        border-right: 28px solid transparent;
+        border-bottom: 2.8rem solid var(--background-color);
+        border-left: 2.8rem solid transparent;
+        border-right: 2.8rem solid transparent;
       }
     }
   }

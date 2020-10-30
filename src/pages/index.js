@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Header from "../components/Header"
 import Section from "../components/Section"
 import SEO from "../components/seo"
+import Profile from "../components/Profile"
 import "../styles/style.scss"
 
 class IndexPage extends React.Component {
@@ -29,27 +30,26 @@ class IndexPage extends React.Component {
   componentDidMount() {
     /* eslint-disable */
     const docWidth = document.documentElement.offsetWidth
-    console.log("docwidth", docWidth)
-    ;[].forEach.call(document.querySelectorAll("*"), function (el) {
-      if (el.offsetWidth > docWidth) {
-        console.log(el)
-      }
-    })
   }
   render() {
     const { activeMenu, bodyWidth, profileHeight } = this.state
     return (
       <Layout>
         <SEO title="Suman Kumar" />
-        <Header
-          activeMenuList={data => this.activeMenuList(data)}
-          activeMenu={activeMenu}
-        />
-        <Section
-          activeMenu={activeMenu}
-          bodyWidth={bodyWidth}
-          profileHeight={profileHeight}
-        />
+        <div className="layout-container">
+          <Profile />
+          <div className="right-container">
+            <Header
+              activeMenuList={data => this.activeMenuList(data)}
+              activeMenu={activeMenu}
+            />
+            <Section
+              activeMenu={activeMenu}
+              bodyWidth={bodyWidth}
+              profileHeight={profileHeight}
+            />
+          </div>
+        </div>
       </Layout>
     )
   }

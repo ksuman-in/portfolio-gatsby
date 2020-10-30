@@ -1,0 +1,55 @@
+#sidebar-wrapper,
+.leftsidebar {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 22rem;
+  min-height: 100vh;
+  margin-left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #f4f4f4;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(#333333, 0.1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: fixed;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  &__header {
+    min-height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--theme-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 106;
+    background-color: #fff;
+  }
+  &__body {
+    width: 100%;
+    max-height: calc(100vh - 9.5rem);
+    height: 100%;
+    position: relative;
+    z-index: 105;
+    .list {
+      list-style: none;
+      margin: 0;
+      padding-bottom: 20px;
+      &__item {
+        margin: 0;
+        padding: 1rem 0 1rem 1.5rem;
+        border-bottom: 1px solid var(--theme-color);
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
