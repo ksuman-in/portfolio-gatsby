@@ -1,11 +1,12 @@
-import React, { Component } from "react"
-import ProgressBar from "../ProgressBar"
-import "./Skills.scss"
-import { GrGatsbyjs } from "react-icons/gr"
-import { FcCustomerSupport } from "react-icons/fc"
-import { FaReact, FaLaptopCode } from "react-icons/fa"
-import { DiJavascript1 } from "react-icons/di"
-import { FaWordpress, FaBootstrap, FaCss3Alt, FaHtml5 } from "react-icons/fa"
+import React, { Component } from 'react'
+import ProgressBar from '../ProgressBar'
+import './Skills.scss'
+import { GrGatsbyjs, GrNode } from 'react-icons/gr'
+import { FcCustomerSupport } from 'react-icons/fc'
+import { FaReact, FaLaptopCode, FaCodepen } from 'react-icons/fa'
+import { DiJavascript1, DiMongodb } from 'react-icons/di'
+import { FaWordpress, FaBootstrap, FaCss3Alt, FaHtml5 } from 'react-icons/fa'
+import ReduxSagaLogo from '../../images/Redux-Saga-Logo.png'
 
 class Skills extends Component {
   componentDidMount() {
@@ -23,13 +24,20 @@ class Skills extends Component {
       {
         name: "React Js",
         percentage: "70%",
-        colorCode: "#61DBFB",
-        iconName: <FaReact fill="#61DBFB" />,
+        colorCode: "#e91e63",
+        iconName: <FaReact fill="#e91e63" />,
       },
       {
         name: "Redux",
         percentage: "70%",
-        colorCode: "#764abc",
+        colorCode: "#e91e63",
+        iconName: <FaReact fill="#e91e63"/>,
+      },
+      {
+        name: "Redux-Saga",
+        percentage: "70%",
+        colorCode: "#e91e63",
+        iconName: <img src={ReduxSagaLogo} alt='Redux-saga Logo'/>,
       },
       {
         name: "Gatsby JS",
@@ -68,6 +76,26 @@ class Skills extends Component {
         iconName: <FaHtml5 fill="#F16529" />,
       },
     ]
+    const skillsLearning = [
+      {
+        name: "Node Js(Express)",
+        percentage: "70%",
+        colorCode: "#303030",
+        iconName: <GrNode fill="#303030" />,
+      },
+      {
+        name: "Mongodb",
+        percentage: "70%",
+        colorCode: "#4DB33D",
+        iconName: <DiMongodb fill="#4DB33D"/>,
+      },
+      {
+        name: "React Native",
+        percentage: "70%",
+        colorCode: "#e91e63",
+        iconName: <FaReact fill="#e91e63"/>,
+      },
+    ]
     return (
       <section id="skills-section" className="tabs-infoblock">
         <div className="tabs-infoblock__inner">
@@ -90,18 +118,28 @@ class Skills extends Component {
               <FaLaptopCode />
               <span className="title__label">Technical Skills</span>
             </h3>
-            <div className="skill-details">
+            <div className="skill-details skill-details-list">
               {skillsDetails.map((skill, index) => {
                 return (
-                  <div className="progress-bar" key={index}>
-                    <ProgressBar
-                      dataPercent={skill.percentage}
-                      strokeColor={skill.colorCode}
-                    />
-                    <div className="skill__name">
-                      {skill.iconName}
-                      <p className="skill__name--text">{skill.name}</p>
-                    </div>
+                  <div className="skills-list" key={index}>
+                    {skill.iconName && <div className="icons">{skill.iconName}</div>}
+                    <p className="skill-name">{skill.name}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="content__section">
+            <h3 className="title title__middle">
+              <FaCodepen />
+              <span className="title__label">Skills On Learning</span>
+            </h3>
+            <div className="skill-details skill-details-list">
+              {skillsLearning.map((skill, index) => {
+                return (
+                  <div className="skills-list" key={index}>
+                    <div className="icons">{skill.iconName}</div>
+                    <p className="skill-name">{skill.name}</p>
                   </div>
                 )
               })}

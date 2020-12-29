@@ -35,7 +35,7 @@ class IndexPage extends React.Component {
     const { activeMenu, bodyWidth, profileHeight } = this.state
     return (
       <Layout>
-        <SEO title="Suman Kumar" />
+        <SEO title="Suman Kumar" themeColor='#05386b'/>
         <div className="layout-container">
           <Profile />
           <div className="right-container">

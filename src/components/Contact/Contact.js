@@ -1,14 +1,14 @@
-import React, { Component } from "react"
-import "./Contact.scss"
+import React, { Component } from 'react'
+import './Contact.scss'
 import {
   GrFacebookOption,
   GrLinkedinOption,
   GrInstagram,
   GrMail,
-} from "react-icons/gr"
-import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai"
-import { FiPhoneCall } from "react-icons/fi"
-import { FaWhatsapp } from "react-icons/fa"
+} from 'react-icons/gr'
+import { AiOutlineGithub, AiOutlineTwitter } from 'react-icons/ai'
+import { FiPhoneCall } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa'
 
 class Contact extends Component {
   componentDidMount() {

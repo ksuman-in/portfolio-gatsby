@@ -30,5 +30,30 @@
         }
       }
     }
+    .skill-details-list {
+      grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+      .skills-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icons {
+          box-shadow: var(--boxShadow);
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            height: 30px;
+            width: 30px;
+          }
+          img {
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }

@@ -65,6 +65,7 @@ class Profile extends Component {
         render={data => {
           return (
             <div className="profile-container" id="profile">
+              <div className="top"></div>
               <div className="avatar">
                 <img
                   className="avatar__img"
@@ -85,12 +86,17 @@ class Profile extends Component {
                   </span>
                   <span className="welcome__label--from">India</span>
                 </p>
-                <p className="welcome__description">
+                <div className="current-working">
+                  <h3>Current Company:</h3>
+                  <p className="company">Frescano infotech pvt ltd</p>
+                  <p className="name">(Bengaluru, India)</p>
+                </div>
+                {/* <p className="welcome__description">
                   I&apos;m a software engineer who is passionate about making
                   open-source more accessible, creating technology to elevate
                   people, and building community. Some technologies I enjoy
                   working with include ReactJs, JavaScript, React Native.
-                </p>
+                </p> */}
               </div>
               <ul className="icons">
                 {socialDetails.map((social, index) => {

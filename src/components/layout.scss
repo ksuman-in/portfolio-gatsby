@@ -30,6 +30,7 @@ body {
   .layout-container {
     max-width: 1536px;
     min-height: 100vh;
+    width: 100%;
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: minmax(320px, 28%) 1fr;
