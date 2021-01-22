@@ -1,30 +1,32 @@
 import React, { Component } from 'react'
 import './Works.scss'
 import { Link } from 'gatsby'
+import Handzap from '../../images/handzap.png'
 
 class Works extends Component {
   componentDidMount() {
     const { bodyWidth, profileHeight } = this.props
     if (bodyWidth <= 768) {
       /* eslint-disable */
-      window.scrollTo({ top: profileHeight, left: 0, behavior: "smooth" })
+      window.scrollTo({ top: profileHeight, left: 0, behavior: 'smooth' })
     } else {
       /* eslint-disable */
       window.scrollTo(0, 0)
     }
   }
-  truncateDescription =  (description) => {
-    const length = description.length;
-    const str = length >=100 ? `${description.slice(0, length-1)}...` : description;
-    return str;
+  truncateDescription = description => {
+    const length = description.length
+    const str =
+      length >= 100 ? `${description.slice(0, length - 1)}...` : description
+    return str
   }
   render() {
     const companyDetails = [
       {
-        name: "Handzap Inc.",
-        imgURL: "https://www.handzap.com/images/slider2.png",
+        name: 'Handzap Inc.',
+        imgURL: Handzap,
         description: `Reward Yourself. Earn More by Inviting Friends to Handzap. Improve People's Lives and Make Money, too! How It works`,
-        url: "https://www.handzap.com/",
+        url: 'https://www.handzap.com/',
       },
       // {
       //   name: "Scribble Solutions",
@@ -45,19 +47,19 @@ class Works extends Component {
       //   url: "https://paridhijaipuria.com/",
       // },
       {
-        name: "Pasha India",
+        name: 'Pasha India',
         imgURL:
-          "https://pashaindia.com/wp-content/uploads/2020/02/Untitled-5-3.jpg",
+          'https://pashaindia.com/wp-content/uploads/2020/02/Untitled-5-3.jpg',
         description: `PASHA INDIA. Founded in 2014, Pasha is a quirky online destination for fashion and accessories. With the use of contrasting colors and a twist of art pop, Pasha`,
-        url: "https://pashaindia.com/",
+        url: 'https://pashaindia.com/',
       },
       {
-        name: "Wonder Years Preschool and Daycare",
+        name: 'Wonder Years Preschool and Daycare',
         imgURL:
-          "https://wonderyearsjaipur.com/wp-content/uploads/2018/03/Hero-5-Full.jpg",
+          'https://wonderyearsjaipur.com/wp-content/uploads/2018/03/Hero-5-Full.jpg',
         description: `Wonder Years is a Reggio Emilia inspired Preschool,
         After School Activity Workshop and Day Care for`,
-        url: "https://wonderyearsjaipur.com/",
+        url: 'https://wonderyearsjaipur.com/',
       },
     ]
     return (
@@ -92,7 +94,9 @@ class Works extends Component {
                   </div>
                   <div className="card__body">
                     <h5 className="card__body--title">{company.name}</h5>
-                    <p className="card__body--desc">{this.truncateDescription(company.description)}</p>
+                    <p className="card__body--desc">
+                      {this.truncateDescription(company.description)}
+                    </p>
                     <a
                       href={company.url}
                       target="_blank"

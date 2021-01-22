@@ -48,8 +48,8 @@
             background-image: linear-gradient(
               to right,
               #f0f0f0,
-              #00b9ff,
-              #59d941,
+              var(--theme-color),
+              var(--theme-color),
               #f0f0f0
             );
             position: absolute;
@@ -64,6 +64,7 @@
             }
             @media screen and (max-width: 420px) {
               width: 60px;
+              display: none;
             }
           }
           &::before {
@@ -115,6 +116,9 @@
           }
           &--label {
             font-size: 2.4rem;
+            @media screen and (max-width: 768px) {
+              font-size: 2.2rem;
+            }
           }
         }
         .blockquote {
@@ -155,6 +159,10 @@
         border-bottom: 2.8rem solid var(--background-color);
         border-left: 2.8rem solid transparent;
         border-right: 2.8rem solid transparent;
+        @media screen and (max-width: 768px) {
+          border-left: 2.4rem solid transparent;
+          border-right: 2.4rem solid transparent;
+        }
       }
     }
   }

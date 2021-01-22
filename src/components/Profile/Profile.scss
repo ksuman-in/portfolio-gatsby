@@ -18,7 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(5, 56, 107, 0.63);
+    background: var(--theme-color);
   }
   .avatar {
     display: block;
@@ -60,7 +60,7 @@
   .welcome {
     width: 100%;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     span {
       &:nth-child(1) {
         margin-right: 0.5rem;

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import {
   FcGlobe,
   FcCalendar,
@@ -9,16 +9,16 @@ import {
   FcIcons8Cup,
   FcReading,
   FcSportsMode,
-} from "react-icons/fc"
-import { GrCode } from "react-icons/gr"
-import "./About.scss"
+} from 'react-icons/fc'
+import { GrCode } from 'react-icons/gr'
+import './About.scss'
 
 class About extends Component {
   componentDidMount() {
     const { bodyWidth, profileHeight } = this.props
     if (bodyWidth <= 768) {
       /* eslint-disable */
-      window.scrollTo({ top: profileHeight, left: 0, behavior: "smooth" })
+      window.scrollTo({ top: profileHeight, left: 0, behavior: 'smooth' })
     } else {
       /* eslint-disable */
       window.scrollTo(0, 0)
@@ -33,9 +33,9 @@ class About extends Component {
           </h2>
           <div className="content__section">
             <blockquote className="blockquote">
-              With a Bachelor’s degree in Computer Science & Engineering and
-              experience HTML5, CSS3, JavaScript, Bootstrap4, Wordpress, SCSS,
-              BEM Methodology, ReactJs, Redux, Saga, Sketch, REST API, Gatsby.
+              Experience with HTML5, CSS3, JavaScript, Bootstrap4, Wordpress,
+              SCSS, BEM Methodology, ReactJs, Redux, Saga, Sketch, REST API,
+              Gatsby.
             </blockquote>
           </div>
           <div className="content__section">
@@ -80,25 +80,25 @@ class About extends Component {
               <div className="iconbox__info">
                 <span className="iconbox__info--heading">
                   <FcApproval /> 20+
-                </span>{" "}
+                </span>{' '}
                 <span className="iconbox__info--label">projects done</span>
               </div>
               <div className="iconbox__info">
                 <span className="iconbox__info--heading">
                   <FcManager /> 10+
-                </span>{" "}
+                </span>{' '}
                 <span className="iconbox__info--label">happy clients</span>
               </div>
               <div className="iconbox__info">
                 <span className="iconbox__info--heading">
                   <FcIcons8Cup /> 10+
-                </span>{" "}
+                </span>{' '}
                 <span className="iconbox__info--label">cups of coffee</span>
               </div>
               <div className="iconbox__info">
                 <span className="iconbox__info--heading">
                   <GrCode /> 1 000 000+
-                </span>{" "}
+                </span>{' '}
                 <span className="iconbox__info--label">lines of coding</span>
               </div>
             </div>

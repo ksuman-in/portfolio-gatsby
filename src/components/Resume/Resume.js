@@ -1,16 +1,16 @@
-import React, { Component } from "react"
-import "./Resume.scss"
-import { BsCloudDownload } from "react-icons/bs"
-import { GrView } from "react-icons/gr"
-import { FaSchool } from "react-icons/fa"
-import { MdWork } from "react-icons/md"
+import React, { Component } from 'react'
+import './Resume.scss'
+import { BsCloudDownload } from 'react-icons/bs'
+import { GrView } from 'react-icons/gr'
+import { FaSchool } from 'react-icons/fa'
+import { MdWork } from 'react-icons/md'
 
 class Resume extends Component {
   componentDidMount() {
     const { bodyWidth, profileHeight } = this.props
     if (bodyWidth <= 768) {
       /* eslint-disable */
-      window.scrollTo({ top: profileHeight, left: 0, behavior: "smooth" })
+      window.scrollTo({ top: profileHeight, left: 0, behavior: 'smooth' })
     } else {
       /* eslint-disable */
       window.scrollTo(0, 0)
@@ -35,7 +35,7 @@ class Resume extends Component {
             </blockquote>
             <div className="resume">
               <a
-                href="dist/images/sumanResume.pdf"
+                href={require('../../images/Suman_React_3years_Resume.pdf')}
                 className="resume__download"
                 download
               >
@@ -43,7 +43,7 @@ class Resume extends Component {
                 <span className="resume__download--label">Download Resume</span>
               </a>
               <a
-                href="dist/images/sumanResume.pdf"
+                href={require('../../images/Suman_React_3years_Resume.pdf')}
                 className="resume__view"
                 target="_blank"
               >

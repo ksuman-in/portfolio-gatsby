@@ -45,6 +45,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          transition: 300ms ease-in;
           svg {
             height: 30px;
             width: 30px;
@@ -52,6 +53,13 @@
           img {
             margin: 0;
           }
+          &:hover{
+            transform: scale(1.1);
+          }
+        }
+        p.skill-name{
+          margin-top: 1rem;
+          font-size: 1.6rem;
         }
       }
     }
