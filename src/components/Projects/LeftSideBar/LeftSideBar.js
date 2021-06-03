@@ -3,11 +3,23 @@ import React, { Component } from 'react';
 import './LeftSideBar.scss';
 
 class LeftSideBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: '',
+    };
+  }
+
+  componentDidMount() {
+    // eslint-disable-next-line no-undef
+    if (typeof window !== `undefined`) {
+      // eslint-disable-next-line no-undef
+      this.setState({ location: window.location });
+    }
+  }
   render() {
     const menuList = [{ title: 'React Hooks', url: '/projects/react-hooks/' }];
-    // eslint-disable-next-line no-undef
-    const location = window.location;
-    console.log('location', location);
+    // console.log('window', this.state.location)
     return (
       <div className="leftsidebar" id="sidebar-wrapper">
         <div className="leftsidebar__header">
@@ -21,7 +33,9 @@ class LeftSideBar extends Component {
               return (
                 <li
                   className={`list__item ${
-                    url === location.pathname && 'active'
+                    url ===
+                      (this.state.location && this.state.location.pathname) &&
+                    'active'
                   }`}
                   key={index}
                 >
