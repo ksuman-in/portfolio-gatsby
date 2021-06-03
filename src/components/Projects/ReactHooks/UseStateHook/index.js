@@ -2,7 +2,7 @@ import React from 'react';
 import UseStateHooks from './UseStateHooks';
 import UseStateHooksWithPrevious from './UseStateHooksWithPrevious';
 import UseStateHooksWithObject from './UseStateHooksWithObject';
-import './UseStateHook.scss';
+import './UseStatehook.scss';
 
 const UseStateHook = () => {
   return (
