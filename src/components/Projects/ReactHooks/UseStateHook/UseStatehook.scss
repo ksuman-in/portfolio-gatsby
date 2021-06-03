@@ -1,0 +1,51 @@
+.usestate-hook {
+  padding-top: 3rem;
+  h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  .usestate-hook1,
+  .usestate-hook2 {
+    border-bottom: .1rem solid var(--theme-color);
+    padding: 4rem 0;
+    pre {
+      font-size: 1.6rem;
+    }
+
+    .action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .result {
+        font-size: 2rem;
+      }
+      input{
+        width: 250px;
+        text-align: center;
+        font-size: 2.5rem;
+        border-radius: .5rem;
+      }
+      .button-group {
+        max-width: 400px;
+        display: grid;
+        grid-column-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2rem;
+        justify-content: center;
+        padding: 2rem 0;
+        button {
+          width: fit-content;
+          padding: 1rem;
+          background-color: var(--theme-color);
+          color: var(--white);
+          border-radius: 0.5rem;
+          outline: none;
+        }
+        input{
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}

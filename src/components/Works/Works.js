@@ -114,7 +114,7 @@ class Works extends Component {
                 <div className="card__body">
                   <h5 className="card__body--title">My Own Projects</h5>
                   <Link
-                    to="/projects"
+                    to="/projects/"
                     target="_blank"
                     rel="noreferrer"
                     className="card__body--button"

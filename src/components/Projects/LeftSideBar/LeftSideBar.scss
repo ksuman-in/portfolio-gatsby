@@ -41,14 +41,28 @@
     position: relative;
     z-index: 105;
     .list {
+      height: 100%;
       list-style: none;
       margin: 0;
       padding-bottom: 20px;
       &__item {
         margin: 0;
-        padding: 1rem 0 1rem 1.5rem;
+        height: 100%;
         border-bottom: 1px solid var(--theme-color);
         font-size: 1.5rem;
+        a {
+          padding: 1rem 0 1rem 1.5rem;
+          display: flex;
+          height: 100%;
+          text-decoration: none;
+          color: var(--theme-color);
+        }
+      }
+      .active {
+        a {
+          background-color: var(--theme-color);
+          color: var(--white);
+        }
       }
     }
   }
