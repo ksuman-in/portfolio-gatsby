@@ -88,7 +88,7 @@ class Profile extends Component {
                 </p>
                 <div className="current-working">
                   <h3>Current Company:</h3>
-                  <p className="company">Frescano infotech pvt ltd</p>
+                  <p className="company">HCL Technologies Limited</p>
                   <p className="name">(Bengaluru, India)</p>
                 </div>
                 {/* <p className="welcome__description">

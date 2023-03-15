@@ -39,9 +39,15 @@ class Skills extends Component {
         colorCode: "#e91e63",
         iconName: <img src={ReduxSagaLogo} alt='Redux-saga Logo'/>,
       },
+      // {
+      //   name: "Typescript",
+      //   percentage: "60%",
+      //   colorCode: "#007acc",
+      //   iconName: <img src={SiTypescript} alt='Typescript Logo'/>,
+      // },
       {
         name: "Gatsby JS",
-        percentage: "60%",
+        percentage: "70%",
         colorCode: "#764abc",
         iconName: <GrGatsbyjs fill="#764abc" />,
       },

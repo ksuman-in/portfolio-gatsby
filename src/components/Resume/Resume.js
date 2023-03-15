@@ -59,13 +59,23 @@ class Resume extends Component {
             </h3>
             <div className="timeline">
               <article className="timeline__box">
+                <h4 className="title_small">Lead Engineer</h4>
+                <div className="company">
+                  <h5 className="company__name">HCL Technologies Limited</h5>
+                  <p className="company__location">(Bengaluru, India)</p>
+                </div>
+                <div className="duration">
+                  <p className="duration__from">Auguest 2021 - Present</p>
+                </div>
+              </article>
+              <article className="timeline__box">
                 <h4 className="title_small">Software Engineer</h4>
                 <div className="company">
                   <h5 className="company__name">Frescano infotech pvt ltd</h5>
                   <p className="company__location">(Bengaluru, India)</p>
                 </div>
                 <div className="duration">
-                  <p className="duration__from">April 2020 - Present</p>
+                  <p className="duration__from">April 2020 - Auguest 2021</p>
                 </div>
               </article>
               <article className="timeline__box">
